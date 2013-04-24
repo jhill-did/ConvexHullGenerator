@@ -28,6 +28,7 @@ private:
     ConvexHullGeneratorMode currentMode;
     std::deque<pt> unusedPts;
     std::deque<pt> usedPts;
+    std::deque<pt> normals;
 };
 
 

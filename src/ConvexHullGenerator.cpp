@@ -165,6 +165,31 @@ void ConvexHullGenerator::CalculateHull()
     }
     printf("\n");
 
+    //Finally let's generates pairs of normals, midpoint -> normal vector point
+    for(unsigned int spot=0; spot < usedPts.size()-1; spot++)
+    {
+        pt firstPoint = usedPts.at(spot);
+        pt secondPoint = usedPts.at(spot+1);
+
+        //Calculate mid point between points
+        pt midpoint;
+        midpoint.x = (firstPoint.x + secondPoint.x)/2;
+        midpoint.y = (firstPoint.y + secondPoint.y)/2;
+
+        //Calculate reflection vector point
+        float cx = -(firstPoint.y - secondPoint.y);
+        float cy =  (firstPoint.x - secondPoint.x);
+        float normalFactor = sqrt(pow(cy,2) + pow(cx,2))*20;
+
+        pt normalVector;
+        normalVector.x =  midpoint.x + cx/normalFactor;
+        normalVector.y =  midpoint.y + cy/normalFactor;
+
+        //Add both in sequence
+        normals.push_back(midpoint);
+        normals.push_back(normalVector);
+    }
+
 
 }
 
@@ -181,6 +206,7 @@ void ConvexHullGenerator::ClearPts()
 {
     unusedPts.clear();
     usedPts.clear();
+    normals.clear();
     CO::printC("Convex Hull cleared!\n", CO::COLOR_INFO);
 }
 
@@ -203,6 +229,7 @@ void ConvexHullGenerator::Draw()
     glEnd();
     glDisable( GL_LINE_STIPPLE );
 
+    //Draw unused points
     glColor3f(0.5f,0.5f,0.5f);
     glBegin( GL_POINTS );
         for(unsigned int x=0; x<unusedPts.size(); x++)
@@ -210,6 +237,8 @@ void ConvexHullGenerator::Draw()
                 pt currentPoint = unusedPts.at(x);
                 glVertex2f(currentPoint.x, currentPoint.y);
             }
+
+    //Draw used Points
     glColor3f(1,0,0);
         for(unsigned int x=0; x<usedPts.size(); x++)
             {
@@ -218,12 +247,25 @@ void ConvexHullGenerator::Draw()
             }
     glEnd();
 
+    //Draw used points lines
     glBegin( GL_LINE_STRIP );
         for(unsigned int x=0; x<usedPts.size(); x++)
             {
                 pt currentPoint = usedPts.at(x);
                 glVertex2f(currentPoint.x, currentPoint.y);
             }
+    glEnd();
+
+
+    glBegin( GL_LINES );
+        if(normals.size()>1)
+        for(unsigned int x=0; x<normals.size()-1; x+=2)
+        {
+            pt firstPoint = normals.at(x);
+            pt secondPoint= normals.at(x+1);
+            glVertex2f(firstPoint.x, firstPoint.y);
+            glVertex2f(secondPoint.x, secondPoint.y);
+        }
     glEnd();
 
     glPopMatrix();

@@ -45,17 +45,17 @@
 	<limits>
 	"ColorOutput.h"
 
-1344886281 c:\users\hilljor\documents\projects\convex hulls\src\convexhullgenerator.h
+1366658325 c:\users\hilljor\documents\projects\convex hulls\src\convexhullgenerator.h
 	<deque>
 
-1344884516 source:l:\convex hulls\src\main.cpp
+1344831938 source:l:\convex hulls\src\main.cpp
 	<windows.h>
 	<gl/glew.h>
 	<gl/glfw.h>
 	<gl/freeglut.h>
 	<stdio.h>
+	<stdlib.h>
 	"ConvexHullGenerator.h"
-	"ColorOutput.h"
 
 1341370914 l:\convex hulls\include\gl\glfw.h
 	<OpenGL/gl3.h>
@@ -78,10 +78,10 @@
 1315186712 l:\convex hulls\include\gl\freeglut_ext.h
 	<stdarg.h>
 
-1344886282 l:\convex hulls\src\convexhullgenerator.h
+1344832356 l:\convex hulls\src\convexhullgenerator.h
 	<deque>
 
-1344884514 source:l:\convex hulls\src\convexhullgenerator.cpp
+1344832032 source:l:\convex hulls\src\convexhullgenerator.cpp
 	"ConvexHullGenerator.h"
 	<gl/gl.h>
 	<gl/glext.h>
@@ -92,7 +92,6 @@
 	<math.h>
 	<stdio.h>
 	<limits>
-	"ColorOutput.h"
 
 1344797862 l:\convex hulls\include\gl\glext.h
 	<windows.h>
@@ -199,7 +198,7 @@
 	<stdint.h>
 	<inttypes.h>
 
-1344867438 c:\users\hilljor\documents\projects\convex hulls\src\coloroutput.h
+1366657803 c:\users\hilljor\documents\projects\convex hulls\src\coloroutput.h
 	<windows.h>
 
 1344270212 c:\users\hilljor\documents\projects\convex hulls\include\gl\glew.h
@@ -211,84 +210,6 @@
 	<GL/glu.h>
 
 1344868138 source:c:\users\hilljor\documents\projects\convex hulls\src\coloroutput.cpp
-	"ColorOutput.h"
-	<stdio.h>
-
-1344867438 l:\convex hulls\src\coloroutput.h
-	<windows.h>
-
-1344868138 source:l:\convex hulls\src\coloroutput.cpp
-	"ColorOutput.h"
-	<stdio.h>
-
-1344884514 source:c:\users\puddin482\documents\projects\graphics\convex hulls\src\convexhullgenerator.cpp
-	"ConvexHullGenerator.h"
-	<gl/gl.h>
-	<gl/glext.h>
-	<windows.h>
-	<gl/glfw.h>
-	<windows.h>
-	<deque>
-	<math.h>
-	<stdio.h>
-	<limits>
-	"ColorOutput.h"
-
-1344886282 c:\users\puddin482\documents\projects\graphics\convex hulls\src\convexhullgenerator.h
-	<deque>
-
-1344797862 c:\users\puddin482\documents\projects\graphics\convex hulls\include\gl\glext.h
-	<windows.h>
-	<stddef.h>
-	<inttypes.h>
-	<inttypes.h>
-	<inttypes.h>
-	<stdint.h>
-	<stdint.h>
-	<inttypes.h>
-
-1341370914 c:\users\puddin482\documents\projects\graphics\convex hulls\include\gl\glfw.h
-	<OpenGL/gl3.h>
-	<OpenGL/gl.h>
-	<OpenGL/glu.h>
-	<GL3/gl3.h>
-	<GL/gl.h>
-	<GL/glu.h>
-
-1344867438 c:\users\puddin482\documents\projects\graphics\convex hulls\src\coloroutput.h
-	<windows.h>
-
-1344884516 source:c:\users\puddin482\documents\projects\graphics\convex hulls\src\main.cpp
-	<windows.h>
-	<gl/glew.h>
-	<gl/glfw.h>
-	<gl/freeglut.h>
-	<stdio.h>
-	"ConvexHullGenerator.h"
-	"ColorOutput.h"
-
-1344270212 c:\users\puddin482\documents\projects\graphics\convex hulls\include\gl\glew.h
-	<stddef.h>
-	<inttypes.h>
-	<stdint.h>
-	<inttypes.h>
-	<OpenGL/glu.h>
-	<GL/glu.h>
-
-1066758114 c:\users\puddin482\documents\projects\graphics\convex hulls\include\gl\freeglut.h
-	"freeglut_std.h"
-	"freeglut_ext.h"
-
-1307699232 c:\users\puddin482\documents\projects\graphics\convex hulls\include\gl\freeglut_std.h
-	<windows.h>
-	<GL/gl.h>
-	<GL/glu.h>
-	<stdlib.h>
-
-1315186712 c:\users\puddin482\documents\projects\graphics\convex hulls\include\gl\freeglut_ext.h
-	<stdarg.h>
-
-1344868138 source:c:\users\puddin482\documents\projects\graphics\convex hulls\src\coloroutput.cpp
 	"ColorOutput.h"
 	<stdio.h>
 
